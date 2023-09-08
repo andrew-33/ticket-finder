@@ -4,34 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/pages/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/TicketfinderApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/src/test/java/com/example/ticketfinder/TicketfinderApplicationTests.java" afterDir="false" />
+    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/react-frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/pages/AddEntry.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketfinder/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketfinder/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +43,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/andre/OneDrive/Documents/Code/ticket-finder&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -81,7 +65,21 @@
       <updated>1692648490894</updated>
       <workItem from="1692648492022" duration="2652000" />
       <workItem from="1692756874808" duration="1252000" />
+      <workItem from="1692758828742" duration="4522000" />
+      <workItem from="1692827448473" duration="2401000" />
+      <workItem from="1693017488122" duration="1437000" />
+      <workItem from="1693701692795" duration="639000" />
+      <workItem from="1693710264749" duration="105000" />
+      <workItem from="1694134970131" duration="3484000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1692759006405</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1692759006405</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,5 +95,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
 </project>
