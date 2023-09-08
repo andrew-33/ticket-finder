@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/react-frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/pages/AddEntry.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/Event.java" afterDir="false" />
+    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="basic layout and files">
+      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/EventController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +64,7 @@
       <workItem from="1693017488122" duration="1437000" />
       <workItem from="1693701692795" duration="639000" />
       <workItem from="1693710264749" duration="105000" />
-      <workItem from="1694134970131" duration="3484000" />
+      <workItem from="1694134970131" duration="12872000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692759006405</created>
@@ -79,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692759006405</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="basic layout and files">
+      <created>1694138883005</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694138883005</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +99,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="basic layout and files" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic layout and files" />
   </component>
 </project>
