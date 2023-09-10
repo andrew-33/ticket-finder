@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from "react"
 
+// to make requests to backend
 export function EventList () {
     const [loading, setLoading] = useState(false);
     const [events, setEvents] = useState([]);

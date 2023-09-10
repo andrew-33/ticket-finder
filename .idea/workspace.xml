@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="basic layout and files">
-      <change afterPath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/EventController.java" afterDir="false" />
+    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="create get event endpoint">
+      <change afterPath="$PROJECT_DIR$/react-frontend/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +51,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OneDrive\Documents\Code\ticket-finder\react-frontend" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,7 +71,9 @@
       <workItem from="1693017488122" duration="1437000" />
       <workItem from="1693701692795" duration="639000" />
       <workItem from="1693710264749" duration="105000" />
-      <workItem from="1694134970131" duration="12872000" />
+      <workItem from="1694134970131" duration="12959000" />
+      <workItem from="1694294813624" duration="8936000" />
+      <workItem from="1694316779744" duration="194000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692759006405</created>
@@ -80,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694138883005</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="create get event endpoint">
+      <created>1694149807314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1694149807314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,6 +116,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="basic layout and files" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic layout and files" />
+    <MESSAGE value="create get event endpoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="create get event endpoint" />
   </component>
 </project>
