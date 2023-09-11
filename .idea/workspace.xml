@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="create get event endpoint">
-      <change afterPath="$PROJECT_DIR$/react-frontend/.env.example" afterDir="false" />
+    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="add ticketmaster api request">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/EventRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketfinder/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketfinder/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/EventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketfinder/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketfinder/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +54,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\andre\OneDrive\Documents\Code\ticket-finder\ticketfinder\src\main\java\com\example\ticketfinder" />
       <recent name="C:\Users\andre\OneDrive\Documents\Code\ticket-finder\react-frontend" />
     </key>
   </component>
@@ -73,7 +75,8 @@
       <workItem from="1693710264749" duration="105000" />
       <workItem from="1694134970131" duration="12959000" />
       <workItem from="1694294813624" duration="8936000" />
-      <workItem from="1694316779744" duration="194000" />
+      <workItem from="1694316779744" duration="347000" />
+      <workItem from="1694390501128" duration="9061000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692759006405</created>
@@ -96,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694149807314</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add ticketmaster api request">
+      <created>1694317044217</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694317044217</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +127,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="basic layout and files" />
     <MESSAGE value="create get event endpoint" />
-    <option name="LAST_COMMIT_MESSAGE" value="create get event endpoint" />
+    <MESSAGE value="add ticketmaster api request" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ticketmaster api request" />
   </component>
 </project>
