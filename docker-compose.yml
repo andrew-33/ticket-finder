@@ -15,6 +15,17 @@ services:
       - MYSQL_ROOT_PASSWORD=root
     volumes:
       - my-db:/var/lib/mysql
+  backend:
+    build:
+      context: ./ticketfinder
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    restart: on-failure
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/db
 
 volumes:
   my-db:

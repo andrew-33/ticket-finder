@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="add mysql db, add mysql driver to spring boot">
+    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="upgrade yarn">
+      <change afterPath="$PROJECT_DIR$/ticketfinder/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
       <workItem from="1694294813624" duration="8936000" />
       <workItem from="1694316779744" duration="347000" />
       <workItem from="1694390501128" duration="10410000" />
-      <workItem from="1694481090938" duration="901000" />
+      <workItem from="1694481090938" duration="6333000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692759006405</created>
@@ -111,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1694400953741</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="upgrade yarn">
+      <created>1694482027304</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694482027304</updated>
+    </task>
+    <task id="LOCAL-00007" summary="upgrade yarn">
+      <created>1694482053932</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694482053932</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +147,7 @@
     <MESSAGE value="create get event endpoint" />
     <MESSAGE value="add ticketmaster api request" />
     <MESSAGE value="add mysql db, add mysql driver to spring boot" />
-    <option name="LAST_COMMIT_MESSAGE" value="add mysql db, add mysql driver to spring boot" />
+    <MESSAGE value="upgrade yarn" />
+    <option name="LAST_COMMIT_MESSAGE" value="upgrade yarn" />
   </component>
 </project>
