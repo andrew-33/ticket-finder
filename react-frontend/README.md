@@ -1,3 +1,3 @@
 # React Frontend App
 
-to run: `npm start`
+to run: `yarn start`
