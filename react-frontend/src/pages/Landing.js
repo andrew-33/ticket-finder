@@ -1,25 +1,24 @@
 import React from 'react';
 import NavBar from "../components/NavBar";
-import styled from "styled-components";
 import {Link} from "react-router-dom";
 import {EventList} from "../components/EventList";
 
-const Header = styled.h2`
-    color: darkslategrey;
-`;
-
 function Landing() {
     return (
-        <div>
+        <div class="bg-light">
             <NavBar />
-            <Link to={"/add-entry"}>
-                <button>Add Manually</button>
-            </Link>
-            <Link to={"/view-listings"}>
-                <button>Find Events</button>
-            </Link>
-            <Header>Upcoming Events</Header>
-            <EventList />
+            <div class="py-4 space-x-20 flex justify-center">
+                <Link to={"/add-entry"}>
+                    <button class="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Add Manually</button>
+                </Link>
+                <Link to={"/view-listings"}>
+                    <button class="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Find Events</button>
+                </Link>
+            </div>
+            <div class="px-20">
+                <h2>Upcoming Events</h2>
+                <EventList/>
+            </div>
         </div>
     );
 }
