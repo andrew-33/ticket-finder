@@ -5,7 +5,7 @@ import {EventList} from "../components/EventList";
 
 function Landing() {
     return (
-        <div class="bg-light">
+        <div class="bg-slate-200 w-full h-full fixed">
             <NavBar />
             <div class="py-4 space-x-20 flex justify-center">
                 <Link to={"/add-entry"}>

@@ -2,7 +2,7 @@ import React from 'react';
 
 function Login() {
     return (
-        <div>
+        <div class="bg-slate-200 w-full h-full fixed">
             <form method="post">
                 <div className="input-container">
                     <label>Username </label>

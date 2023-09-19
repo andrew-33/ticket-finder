@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="update readme for docker compose">
-      <change afterPath="$PROJECT_DIR$/react-frontend/tailwind.config.js" afterDir="false" />
+    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/NavBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/AddEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/AddEntry.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/Landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/ViewListings.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +77,9 @@
       <workItem from="1694390501128" duration="10410000" />
       <workItem from="1694481090938" duration="6497000" />
       <workItem from="1694654208685" duration="2203000" />
-      <workItem from="1694743854505" duration="4707000" />
+      <workItem from="1694743854505" duration="4781000" />
+      <workItem from="1694997391240" duration="1194000" />
+      <workItem from="1695091214204" duration="1668000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692759006405</created>
@@ -146,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694745282544</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="css">
+      <created>1694750462123</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694750462123</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +177,7 @@
     <MESSAGE value="upgrade yarn" />
     <MESSAGE value="dockerize backend" />
     <MESSAGE value="update readme for docker compose" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme for docker compose" />
+    <MESSAGE value="css" />
+    <option name="LAST_COMMIT_MESSAGE" value="css" />
   </component>
 </project>

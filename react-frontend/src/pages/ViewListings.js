@@ -24,7 +24,7 @@ export function ViewListings() {
     }, [])
 
     return (
-        <div>
+        <div class="bg-slate-200 w-full h-full fixed">
             <NavBar />
             {loading ? (<h1>loading...</h1>) : (
                 <div>
