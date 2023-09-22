@@ -10,9 +10,9 @@ export function EventList () {
         const load = async () => {
             setLoading(true);
 
-            const response = await fetch("http://localhost:8080/event");
+            const response = await fetch("http://localhost:8080/api/all");
 
-            setEvents(await response.json());
+            setEvents((await response.json())[0].name);
             setLoading(false);
         }
 
@@ -28,7 +28,7 @@ export function EventList () {
                 //         <li key={event.id}>{event.content}</li>
                 //     ))}
                 // </ul>
-                <h1>{events.id}</h1>
+                <h1>{events}</h1>
             )}
         </div>
     );

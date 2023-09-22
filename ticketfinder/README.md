@@ -1,7 +1,7 @@
 # Spring Boot Rest Service
 to run mysql and spring boot with docker: 
 - `cd ..`
-- `docker compose up`
+- `docker compose up --build`
 
 to stop:
 - `docker compose down`

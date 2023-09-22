@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="css">
+    <list default="true" id="b7d2422e-257f-4015-913f-188639cfd170" name="Changes" comment="add forms frontend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/AddEntry.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/AddEntry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-frontend/src/pages/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/pages/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-frontend/src/components/EventList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketfinder/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/ticketfinder/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/EventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketfinder/src/main/java/com/example/ticketfinder/EventController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +47,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -78,7 +81,9 @@
       <workItem from="1694743854505" duration="4781000" />
       <workItem from="1694997391240" duration="1194000" />
       <workItem from="1695091214204" duration="2296000" />
-      <workItem from="1695171434989" duration="3654000" />
+      <workItem from="1695171434989" duration="4286000" />
+      <workItem from="1695342942924" duration="4621000" />
+      <workItem from="1695347725722" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1692759006405</created>
@@ -157,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695093914804</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add forms frontend">
+      <created>1695175529514</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1695175529514</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +196,7 @@
     <MESSAGE value="dockerize backend" />
     <MESSAGE value="update readme for docker compose" />
     <MESSAGE value="css" />
-    <option name="LAST_COMMIT_MESSAGE" value="css" />
+    <MESSAGE value="add forms frontend" />
+    <option name="LAST_COMMIT_MESSAGE" value="add forms frontend" />
   </component>
 </project>
