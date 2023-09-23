@@ -40,7 +40,7 @@ public class EventController {
         return "Deleted all";
     }
 
-    @DeleteMapping(path="delete")
+    @DeleteMapping(path="/delete")
     public @ResponseBody String deleteEvent(@RequestParam Integer id) {
         eventRepository.deleteById(id);
         return "Deleted id " + Integer.toString(id);
