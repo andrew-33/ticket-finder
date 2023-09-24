@@ -3,8 +3,8 @@ import NavBar from "../components/NavBar";
 
 const parseEvents = async (response) => {
     let json = await response.json(); // await is important here
-    json = json._embedded.events[0].name;
-    return JSON.stringify(json);
+    json = json._embedded.events;
+    return json;
 }
 
 // to make requests to the public Discovery API
@@ -27,7 +27,7 @@ export function ViewListings() {
             const response = await fetch(url);
             const result = await parseEvents(response);
 
-            setEvents([result]);
+            setEvents(result);
             setLoading(false);
         }
 
@@ -36,18 +36,34 @@ export function ViewListings() {
     }, [])
 
     return (
-        <div class="bg-slate-200 w-full h-full fixed">
+        <div class="bg-slate-200 w-full h-full fixed overflow-auto">
             <NavBar />
-            {loading ? (<h1>loading...</h1>) : (
-                <div>
-                    {/*<ul>*/}
-                    {/*    {events["_embedded"]["events"].map(event => (*/}
-                    {/*        <li>{event.name}</li>*/}
-                    {/*    ))}*/}
-                    {/*</ul>*/}
-                    <p>{events}</p>
-                </div>
-            )}
+
+            <div class="py-8 px-16">
+                <h1>Upcoming Events</h1>
+                <br/>
+
+                {loading ? (<h1>loading...</h1>) : (
+                    <div>
+                        <ul>
+                            {events.map(event => (
+                                <li>
+                                    <b>
+                                        <a href={event.url}>
+                                            {event.name}
+                                        </a>
+                                    </b>
+                                    <p>{event.dates.start.localDate}</p>
+                                    <p>{event._embedded.venues[0].name}</p>
+                                    <br/>
+
+                                </li>
+                            ))}
+                        </ul>
+                        {/*<p>{events}</p>*/}
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
