@@ -55,12 +55,20 @@ export function ViewListings() {
                                     </b>
                                     <p>{event.dates.start.localDate}</p>
                                     <p>{event._embedded.venues[0].name}</p>
+                                    {event.priceRanges ?
+                                        <div>
+                                            <p>
+                                                min: {event.priceRanges[0].min} {event.priceRanges[0].currency}
+                                            </p>
+                                            <p>
+                                                max: {event.priceRanges[0].max} {event.priceRanges[0].currency}
+                                            </p>
+                                        </div> :
+                                        <p>no price info</p>}
                                     <br/>
-
                                 </li>
                             ))}
                         </ul>
-                        {/*<p>{events}</p>*/}
                     </div>
                 )}
             </div>
