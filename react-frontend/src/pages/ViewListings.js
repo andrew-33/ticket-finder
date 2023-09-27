@@ -2,9 +2,21 @@ import React, {useEffect, useState} from 'react';
 import NavBar from "../components/NavBar";
 
 const parseEvents = async (response) => {
-    let json = await response.json(); // await is important here
-    json = json._embedded.events;
-    return json;
+    let events = await response.json(); // await is important here
+    events = events._embedded.events;
+    const parsedEvents = events.map(event => (
+        {
+            name: event.name,
+            date: event.dates.start.localDate,
+            url: event.url,
+            venue: event._embedded.venues[0].name,
+            min: event.priceRanges ? event.priceRanges[0].min : -1,
+            max: event.priceRanges ? event.priceRanges[0].max : -1,
+            currency: event.priceRanges ? event.priceRanges[0].currency : ""
+        }
+    ));
+
+    return parsedEvents;
 }
 
 // to make requests to the public Discovery API
@@ -44,6 +56,7 @@ export function ViewListings() {
                 <br/>
 
                 {loading ? (<h1>loading...</h1>) : (
+
                     <div>
                         <ul>
                             {events.map(event => (
@@ -53,18 +66,16 @@ export function ViewListings() {
                                             {event.name}
                                         </a>
                                     </b>
-                                    <p>{event.dates.start.localDate}</p>
-                                    <p>{event._embedded.venues[0].name}</p>
-                                    {event.priceRanges ?
-                                        <div>
-                                            <p>
-                                                min: {event.priceRanges[0].min} {event.priceRanges[0].currency}
-                                            </p>
-                                            <p>
-                                                max: {event.priceRanges[0].max} {event.priceRanges[0].currency}
-                                            </p>
-                                        </div> :
-                                        <p>no price info</p>}
+                                    <p>{event.date}</p>
+                                    <p>{event.venue}</p>
+                                    <div>
+                                        <p>
+                                            min: {event.min} {event.currency}
+                                        </p>
+                                        <p>
+                                            max: {event.max} {event.currency}
+                                        </p>
+                                    </div>
                                     <br/>
                                 </li>
                             ))}
