@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import NavBar from "../components/NavBar";
 
 const saveEvent = async (event) => {
-    const url = process.env.REACT_APP_BACKEND_URL + "/api/add?name=" + event.name + "&url=" + event.url;
+    const url = process.env.REACT_APP_BACKEND_URL + "/api/add?name=" + event.id + "&url=" + event.url;
     const response = await fetch(url, {
         method: "POST",
     });
@@ -21,7 +21,8 @@ const parseEvents = async (response) => {
             venue: event._embedded.venues[0].name,
             min: event.priceRanges ? event.priceRanges[0].min : -1,
             max: event.priceRanges ? event.priceRanges[0].max : -1, // note: max=999 means 999+
-            currency: event.priceRanges ? event.priceRanges[0].currency : ""
+            currency: event.priceRanges ? event.priceRanges[0].currency : "",
+            id: event.id
         }
     ));
 
