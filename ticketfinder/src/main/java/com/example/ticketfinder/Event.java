@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ElementCollection;
+import java.util.ArrayList;
+
 
 @Entity
 public class Event {
@@ -14,6 +17,15 @@ public class Event {
     private String name;
 
     private String url;
+
+    @ElementCollection
+    private ArrayList<Float> minPrices = new ArrayList<Float>();
+
+    @ElementCollection
+    private ArrayList<Float> maxPrices = new ArrayList<Float>();
+
+    @ElementCollection
+    private ArrayList<String> priceDates = new ArrayList<String>();
 
     public Integer getId() {
         return id;
@@ -37,4 +49,27 @@ public class Event {
         this.url = url;
     }
 
+    public ArrayList<Float> getMinPrices() {
+        return minPrices;
+    };
+
+    public void addMinPrices(Float price) {
+        this.minPrices.add(price);
+    }
+
+    public ArrayList<Float> getMaxPrices() {
+        return maxPrices;
+    };
+
+    public void addMaxPrices(Float price) {
+        this.maxPrices.add(price);
+    }
+
+    public ArrayList<String> getPriceDate() {
+        return priceDates;
+    }
+
+    public void addPriceDates(String date) {
+        this.priceDates.add(date);
+    }
 }

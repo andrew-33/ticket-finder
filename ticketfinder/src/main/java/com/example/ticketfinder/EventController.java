@@ -16,13 +16,17 @@ public class EventController {
     private EventRepository eventRepository;
 
     @PostMapping(path="/add") // Map ONLY POST Requests
-    public @ResponseBody String addEvent (@RequestParam String name, @RequestParam String url) {
+    public @ResponseBody String addEvent (@RequestParam String name, @RequestParam String url,
+                                          @RequestParam Float minPrice, @RequestParam Float maxPrice, @RequestParam String date) {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
         Event n = new Event();
         n.setName(name);
         n.setUrl(url);
+        n.addMinPrices(minPrice);
+        n.addMaxPrices(maxPrice);
+        n.addPriceDates(date);
         eventRepository.save(n);
         return "Saved";
     }
