@@ -57,13 +57,30 @@ export function ViewListings() {
 
     }, [])
 
+    const buttonClass = "shadow appearance-none border rounded w-[10%] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline";
+
     return (
         <div class="bg-slate-200 w-full h-full fixed overflow-auto">
             <NavBar />
 
-            <div class="py-8 px-16">
-                <h1>Upcoming Events</h1>
+                <br/><br/>
+                <h1 class="px-[5%]">Upcoming Events</h1>
+
+            <div className="py-8 px-[15%] ">
+                <div class="space-x-20">
+                    <h3>Filter</h3>
+                    <input className={buttonClass} id="name" name="name" type="text" placeholder="Name" />
+                    <input className={buttonClass} id="city" name="city" type="text" placeholder="City" />
+                    <input className={buttonClass} id="genre" name="genre" type="text" placeholder="Genre" />
+                    <input className={buttonClass} id="venue" name="venue" type="text" placeholder="Venue" />
+                </div>
                 <br/>
+
+                <button //onClick={} TODO
+                        className="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                    Apply
+                </button>
+                <br/><br/>
 
                 {loading ? (<h1>loading...</h1>) : (
 
@@ -71,25 +88,30 @@ export function ViewListings() {
                         <ul>
                             {events.map(event => (
                                 <li>
-                                    <button onClick={() => saveEvent(event)} class="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                                        Save
-                                    </button>
+
                                     <b>
                                         <a href={event.url}>
                                             {event.name}
                                         </a>
                                     </b>
-                                    <p>{event.date}</p>
-                                    <p>{event.venue}</p>
-                                    <div>
+                                    <div class="px-5">
+                                        <p>{event.date}</p>
+                                        <p>{event.venue}</p>
                                         <p>
                                             min: {event.min} {event.currency}
                                         </p>
                                         <p>
                                             max: {event.max} {event.currency}
                                         </p>
+
                                     </div>
-                                    <br/>
+
+
+                                    <button onClick={() => saveEvent(event)}
+                                            className="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+                                        Save
+                                    </button>
+                                    <br/> <br/>
                                 </li>
                             ))}
                         </ul>
