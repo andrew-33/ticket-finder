@@ -53,23 +53,23 @@ public class Event {
         return minPrices;
     };
 
-    public void addMinPrices(Float price) {
-        this.minPrices.add(price);
+    public void setMinPrices(ArrayList<Float> prices) {
+        this.minPrices = prices;
     }
 
     public ArrayList<Float> getMaxPrices() {
         return maxPrices;
     };
 
-    public void addMaxPrices(Float price) {
-        this.maxPrices.add(price);
+    public void setMaxPrices(ArrayList<Float> prices) {
+        this.maxPrices = prices;
     }
 
     public ArrayList<String> getPriceDate() {
         return priceDates;
     }
 
-    public void addPriceDates(String date) {
-        this.priceDates.add(date);
+    public void setPriceDates(ArrayList<String> dates) {
+        this.priceDates = dates;
     }
 }
