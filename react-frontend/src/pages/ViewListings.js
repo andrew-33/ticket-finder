@@ -1,8 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import NavBar from "../components/NavBar";
 
+
 const saveEvent = async (event) => {
-    const url = process.env.REACT_APP_BACKEND_URL + "/api/add?name=" + event.id + "&url=" + event.url;
+    let currDate = new Date();
+    currDate = currDate.toISOString().split('T')[0];
+
+    const url = process.env.REACT_APP_BACKEND_URL + "/api/add?name=" + event.id + "&url=" + event.url + "&minPrice="
+                + event.min.toString() + "&maxPrice=" + event.max.toString() + "&date=" + currDate;
+
     const response = await fetch(url, {
         method: "POST",
     });
