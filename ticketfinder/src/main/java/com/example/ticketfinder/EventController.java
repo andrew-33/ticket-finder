@@ -15,6 +15,9 @@ public class EventController {
     @Autowired
     private EventRepository eventRepository;
 
+    @Autowired
+    private TimepointRepository timepointRepository;
+
     @PostMapping(path="/add") // Map ONLY POST Requests
     public @ResponseBody String addEvent (@RequestParam String name, @RequestParam String url,
                                           @RequestParam Float minPrice, @RequestParam Float maxPrice, @RequestParam String date) {
@@ -24,10 +27,15 @@ public class EventController {
         Event n = new Event();
         n.setName(name);
         n.setUrl(url);
-        n.getMinPrices().add(minPrice);
-        n.getMaxPrices().add(maxPrice);
-        n.getPriceDates().add(date);
-        eventRepository.save(n);
+        Event saved = eventRepository.save(n);
+
+        Timepoint t = new Timepoint();
+        t.setEvent(saved);
+        t.setMinPrice(minPrice);
+        t.setMaxPrice(maxPrice);
+        t.setDate(date);
+        timepointRepository.save(t);
+
         return "Saved";
     }
 

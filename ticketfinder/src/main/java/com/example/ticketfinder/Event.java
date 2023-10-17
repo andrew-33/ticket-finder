@@ -1,37 +1,30 @@
 package com.example.ticketfinder;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.ElementCollection;
+import jakarta.persistence.*;
+
 import java.util.ArrayList;
 
 
 @Entity
 public class Event {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
     private String name;
 
     private String url;
 
-    @ElementCollection
-    private ArrayList<Float> minPrices = new ArrayList<Float>();
-
-    @ElementCollection
-    private ArrayList<Float> maxPrices = new ArrayList<Float>();
-
-    @ElementCollection
-    private ArrayList<String> priceDates = new ArrayList<String>();
+    @OneToMany(mappedBy = "event")
+    private ArrayList<Timepoint> timepoints;
 
     public Integer getId() {
         return id;
     }
 
-    public void setId(Integer id) { this.id = id; }
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -49,27 +42,12 @@ public class Event {
         this.url = url;
     }
 
-    public ArrayList<Float> getMinPrices() {
-        return minPrices;
-    };
-
-    public void setMinPrices(ArrayList<Float> prices) {
-        this.minPrices = prices;
+    public ArrayList<Timepoint> getTimepoints() {
+        return timepoints;
     }
 
-    public ArrayList<Float> getMaxPrices() {
-        return maxPrices;
-    };
-
-    public void setMaxPrices(ArrayList<Float> prices) {
-        this.maxPrices = prices;
+    public void setTimepoints(ArrayList<Timepoint> timepoints) {
+        this.timepoints = timepoints;
     }
 
-    public ArrayList<String> getPriceDate() {
-        return priceDates;
-    }
-
-    public void setPriceDates(ArrayList<String> dates) {
-        this.priceDates = dates;
-    }
 }
