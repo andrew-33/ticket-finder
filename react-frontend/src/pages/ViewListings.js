@@ -37,18 +37,18 @@ const parseEvents = async (response) => {
 
 // to make requests to the public Discovery API
 export function ViewListings() {
+    const BASE_URL = "https://app.ticketmaster.com/discovery/v2/events?apikey=" + process.env.REACT_APP_API_KEY;
+
     const [loading, setLoading] = useState(false);
     const [events, setEvents] = useState([]);
-    const [url, setUrl] = useState("https://app.ticketmaster.com/discovery/v2/events?apikey=" + process.env.REACT_APP_API_KEY)
+    const [url, setUrl] = useState(BASE_URL);
 
     useEffect(() => {
 
-        let initialUrl = url;
+        let initialUrl = BASE_URL;
         const params = ["&marketId=102", "&segmentName=music"]
         for (const item of params) {
-            if (!url.includes(item)) {
-                initialUrl += item;
-            }
+            initialUrl += item;
         }
         setUrl(initialUrl);
 
