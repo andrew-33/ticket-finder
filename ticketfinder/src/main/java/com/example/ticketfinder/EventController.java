@@ -1,12 +1,10 @@
 package com.example.ticketfinder;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.ResponseBody;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @RestController
@@ -17,6 +15,19 @@ public class EventController {
 
     @Autowired
     private TimepointRepository timepointRepository;
+
+    @ControllerAdvice
+    public class Handler {
+
+        @ExceptionHandler(Exception.class)
+        public ResponseEntity<Object> handle(Exception ex,
+                                             HttpServletRequest request, HttpServletResponse response) {
+            if (ex instanceof NullPointerException) {
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        }
+    }
 
     @PostMapping(path="/add") // Map ONLY POST Requests
     public @ResponseBody String addEvent (@RequestParam String name, @RequestParam String url,
@@ -49,6 +60,7 @@ public class EventController {
     @DeleteMapping(path="/delete-all")
     public @ResponseBody String deleteAll() {
         eventRepository.deleteAll();
+        timepointRepository.deleteAll();
         return "Deleted all";
     }
 

@@ -64,7 +64,7 @@ export function ViewListings() {
 
         load();
 
-    }, [])
+    }, [BASE_URL, url])
 
     async function applyFilters(e) {
         e.preventDefault();
