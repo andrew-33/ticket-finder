@@ -2,9 +2,6 @@ package com.example.ticketfinder;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-
-
 @Entity
 public class Event {
     @Id
@@ -14,9 +11,6 @@ public class Event {
     private String name;
 
     private String url;
-
-    @OneToMany(mappedBy = "event")
-    private ArrayList<Timepoint> timepoints;
 
     public Integer getId() {
         return id;
@@ -40,14 +34,6 @@ public class Event {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public ArrayList<Timepoint> getTimepoints() {
-        return timepoints;
-    }
-
-    public void setTimepoints(ArrayList<Timepoint> timepoints) {
-        this.timepoints = timepoints;
     }
 
 }
