@@ -66,6 +66,7 @@ public class EventController {
 
     @DeleteMapping(path="/delete")
     public @ResponseBody String deleteEvent(@RequestParam Integer id) {
+        timepointRepository.deleteByEventId(id);
         eventRepository.deleteById(id);
         return "Deleted id " + Integer.toString(id);
     }
