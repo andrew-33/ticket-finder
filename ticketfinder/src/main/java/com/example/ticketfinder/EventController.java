@@ -52,7 +52,8 @@ public class EventController {
 
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Event> getAllEvents() {
+    public @ResponseBody Iterable<Event> getAllEvents(HttpServletResponse response) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
         // This returns a JSON or XML with the events
         return eventRepository.findAll();
     }
