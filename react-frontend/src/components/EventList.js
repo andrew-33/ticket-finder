@@ -29,7 +29,7 @@ const getDetails = async (ids) => {
 
 
 // to make requests to backend
-export function EventList () {
+export function EventList() {
     const [loading, setLoading] = useState(false);
     const [events, setEvents] = useState([]);
 
@@ -39,31 +39,30 @@ export function EventList () {
 
             const response = await fetch("http://localhost:8080/api/all");
 
-            // get url of event and parse
-            const ids = await getURLs(response);
-            const eventDetails = await getDetails(ids);
+        // get url of event and parse
+        const ids = await getURLs(response);
+        const eventDetails = await getDetails(ids);
 
-            setEvents(eventDetails);
+        setEvents(eventDetails);
 
-            setLoading(false);
-        }
+        setLoading(false);
+    }
+    load();
 
-        load();
+}, [])
 
-    }, [])
-
-    return (
-        <div>
-            {loading ? (<h1>loading...</h1>) : (
-                <ul>
-                    {events.map(event => (
+return (
+    <div>
+        {loading ? (<h1>loading...</h1>) : (
+            <ul>
+                {events.map(event => (
+                    <a href={event.url}>
                         <li key={event.id}>{event.name}</li>
-                    ))}
-                </ul>)}
-        </div>
-    );
-
-
+                    </a>
+                ))}
+            </ul>)}
+    </div>
+);
 }
 
 
