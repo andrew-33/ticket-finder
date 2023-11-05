@@ -58,6 +58,12 @@ public class EventController {
         return eventRepository.findAll();
     }
 
+    @GetMapping(path="/price")
+    public @ResponseBody Iterable<Timepoint> getPrices(HttpServletResponse response, @RequestParam Integer id) {
+        response.setHeader("Access-Control-Allow-Origin", "*");
+        return timepointRepository.findAllByEventId(id);
+    }
+
     @DeleteMapping(path="/delete-all")
     public @ResponseBody String deleteAll() {
         eventRepository.deleteAll();
