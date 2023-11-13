@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ticket-finder-api" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="ticketfinder" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ticketfinder.TicketfinderApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
