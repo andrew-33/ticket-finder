@@ -1,5 +1,6 @@
 import React from 'react';
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
+import { LineChart } from '@mui/x-charts/LineChart';
 
 const getURLs = async (response) => {
     return (await response.json()).map(event => (
@@ -37,32 +38,37 @@ export function EventList() {
         const load = async () => {
             setLoading(true);
 
-            const response = await fetch("http://localhost:8080/api/all");
+            let response = await fetch("http://localhost:8080/api/all");
 
-        // get url of event and parse
-        const ids = await getURLs(response);
-        const eventDetails = await getDetails(ids);
+            // temporarily disabled to reduce calls to ticketmaster api
+            // get url of event and parse
+            // const ids = await getURLs(response);
+            // const eventDetails = await getDetails(ids);
+            //
+            // setEvents(eventDetails);
 
-        setEvents(eventDetails);
+            response = await response.json();
+            setEvents(response);
 
-        setLoading(false);
-    }
-    load();
+            setLoading(false);
+        }
+        load();
 
-}, [])
+    }, [])
 
-return (
-    <div>
-        {loading ? (<h1>loading...</h1>) : (
-            <ul>
-                {events.map(event => (
-                    <a href={event.url}>
-                        <li key={event.id}>{event.name}</li>
-                    </a>
-                ))}
-            </ul>)}
-    </div>
-);
+    return (
+        <div>
+            {loading ? (<h1>loading...</h1>) : (
+                <ul>
+                    {events.map(event => (
+                        <a href={event.url}>
+                            <li key={event.id}>{event.name}</li>
+                            {/*<LineChart />*/}
+                        </a>
+                    ))}
+                </ul>)}
+        </div>
+    );
 }
 
 
