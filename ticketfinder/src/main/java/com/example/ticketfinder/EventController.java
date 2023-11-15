@@ -50,6 +50,17 @@ public class EventController {
         return "Saved";
     }
 
+    @PostMapping(path="/addPrice")
+    public @ResponseBody String addPrice (@RequestParam Integer id, @RequestParam Float minPrice, @RequestParam Float maxPrice, @RequestParam String date) {
+        Timepoint t = new Timepoint();
+        t.setEvent(eventRepository.getById(id));
+        t.setMinPrice(minPrice);
+        t.setMaxPrice(maxPrice);
+        t.setDate(date);
+        timepointRepository.save(t);
+
+        return "Saved";
+    }
 
     @GetMapping(path="/all")
     public @ResponseBody Iterable<Event> getAllEvents(HttpServletResponse response) {
