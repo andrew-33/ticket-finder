@@ -28,7 +28,6 @@ const getDetails = async (ids) => {
     return events;
 }
 
-
 // to make requests to backend
 export function EventList() {
     const [loading, setLoading] = useState(false);
@@ -56,8 +55,14 @@ export function EventList() {
 
     }, [])
 
+    const refresh = async () => {
+        // todo: make new POST endpoint to add a new timepoint for a given event and then use the endpoint here
+    }
+
     return (
         <div>
+            <button class="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" onClick={refresh}>Refresh</button>
+
             {loading ? (<h1>loading...</h1>) : (
                 <ul>
                     {events.map(event => (
