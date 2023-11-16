@@ -3,7 +3,7 @@ import {useEffect, useState} from "react"
 import { LineChart } from '@mui/x-charts/LineChart';
 
 const getURLs = async (response) => {
-    return (await response.json()).map(event => (
+    return response.map(event => (
         event.name
     ))
 }
@@ -22,7 +22,8 @@ const getDetails = async (ids) => {
             min: event.priceRanges ? event.priceRanges[0].min : -1,
             max: event.priceRanges ? event.priceRanges[0].max : -1, // note: max=999 means 999+
             currency: event.priceRanges ? event.priceRanges[0].currency : "",
-            id: event.id
+            id: event.id,
+            local_id: event
         });
     }
     return events;
@@ -32,22 +33,27 @@ const getDetails = async (ids) => {
 export function EventList() {
     const [loading, setLoading] = useState(false);
     const [events, setEvents] = useState([]);
+    const [eventIds, setEventIds] = useState([]);
 
     useEffect(() => {
         const load = async () => {
             setLoading(true);
 
             let response = await fetch("http://localhost:8080/api/all");
-
-            // temporarily disabled to reduce calls to ticketmaster api
-            // get url of event and parse
-            // const ids = await getURLs(response);
-            // const eventDetails = await getDetails(ids);
-            //
-            // setEvents(eventDetails);
-
             response = await response.json();
-            setEvents(response);
+
+            setEventIds(
+                response.map(event => (
+                    event.id
+                ))
+            );
+
+            // disable to reduce calls to ticketmaster api
+            // get url of event and parse
+            const ids = await getURLs(response);
+            const eventDetails = await getDetails(ids);
+
+            setEvents(eventDetails);
 
             setLoading(false);
         }
@@ -57,6 +63,25 @@ export function EventList() {
 
     const refresh = async () => {
         // todo: make new POST endpoint to add a new timepoint for a given event and then use the endpoint here
+        let currDate = new Date();
+        currDate = currDate.toISOString().split('T')[0];
+
+        for (let i = 0; i < events.length; i++) {
+            const eventId = eventIds[i];
+            const event = events[i];
+
+            const url = process.env.REACT_APP_BACKEND_URL + "/api/addPrice?id=" + eventId + "&minPrice="
+                + event.min.toString() + "&maxPrice=" + event.max.toString() + "&date=" + currDate;
+
+            try {
+                const response = await fetch(url, {
+                    method: "POST",
+                });
+                console.log(response);
+            } catch (e) {
+
+            }
+        }
     }
 
     return (
