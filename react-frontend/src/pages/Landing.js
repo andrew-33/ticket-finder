@@ -5,7 +5,7 @@ import {EventList} from "../components/EventList";
 
 function Landing() {
     return (
-        <div class="bg-slate-200 w-screen h-screen fixed">
+        <div class="bg-slate-200 w-screen h-screen fixed overflow-auto">
             <NavBar />
             <div class="py-4 space-x-20 flex justify-center">
                 <Link to={"/add-entry"}>
@@ -16,7 +16,7 @@ function Landing() {
                 </Link>
             </div>
             <div class="px-[20%]">
-                <h2>Upcoming Events</h2>
+                <h2>Saved Events</h2>
                 <EventList/>
             </div>
         </div>

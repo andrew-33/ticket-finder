@@ -109,9 +109,11 @@ export function EventList() {
                                 series={[
                                     {
                                         data: event.min_prices,
+                                        label: "Min Price",
                                     },
                                     {
                                         data: event.max_prices,
+                                        label: "Max Price",
                                     }
                                 ]}
                                 width={500}
