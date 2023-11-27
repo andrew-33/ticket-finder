@@ -8,5 +8,5 @@ public interface TimepointRepository extends CrudRepository<Timepoint, Integer> 
     @Transactional
     Long deleteByEventId(Integer eventId);
 
-    Iterable<Timepoint> findAllByEventId(Integer eventId);
+    Iterable<Timepoint> findAllByEventName(String eventId);
 }

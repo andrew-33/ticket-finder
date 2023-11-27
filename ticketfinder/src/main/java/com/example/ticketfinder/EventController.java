@@ -70,9 +70,9 @@ public class EventController {
     }
 
     @GetMapping(path="/price")
-    public @ResponseBody Iterable<Timepoint> getPrices(HttpServletResponse response, @RequestParam Integer id) {
+    public @ResponseBody Iterable<Timepoint> getPrices(HttpServletResponse response, @RequestParam String id) {
         response.setHeader("Access-Control-Allow-Origin", "*");
-        return timepointRepository.findAllByEventId(id);
+        return timepointRepository.findAllByEventName(id);
     }
 
     @DeleteMapping(path="/delete-all")
