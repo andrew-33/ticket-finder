@@ -1,6 +1,6 @@
 import React from 'react';
 import {useEffect, useState} from "react"
-import { LineChart } from '@mui/x-charts/LineChart';
+import {LineChart} from '@mui/x-charts/LineChart';
 
 const getURLs = async (response) => {
     return response.map(event => (
@@ -14,6 +14,11 @@ const getDetails = async (ids) => {
         const id = ids[i];
         let event = await fetch("https://app.ticketmaster.com/discovery/v2/events/" + id + "?apikey=" + process.env.REACT_APP_API_KEY);
         event = await event.json();
+
+        // get the prices for this event
+        let timepoints = await fetch("http://localhost:8080/api/price?id=" + event.id);
+        timepoints = await timepoints.json();
+
         events.push({
             name: event.name,
             date: event.dates.start.localDate,
@@ -23,7 +28,10 @@ const getDetails = async (ids) => {
             max: event.priceRanges ? event.priceRanges[0].max : -1, // note: max=999 means 999+
             currency: event.priceRanges ? event.priceRanges[0].currency : "",
             id: event.id,
-            local_id: event
+            local_id: event,
+            price_dates: timepoints.map(timepoint => new Date(timepoint.date)),
+            min_prices: timepoints.map(timepoint => timepoint.minPrice),
+            max_prices: timepoints.map(timepoint => timepoint.maxPrice)
         });
     }
     return events;
@@ -79,21 +87,36 @@ export function EventList() {
                 });
                 console.log(response);
             } catch (e) {
-
+                // try catch because gives 400 even when works correctly
             }
         }
     }
 
     return (
         <div>
-            <button class="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded" onClick={refresh}>Refresh</button>
+            <button class="bg-dark hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+                    onClick={refresh}>Refresh
+            </button>
 
             {loading ? (<h1>loading...</h1>) : (
                 <ul>
                     {events.map(event => (
                         <a href={event.url}>
                             <li key={event.id}>{event.name}</li>
-                            {/*<LineChart />*/}
+
+                            <LineChart
+                                xAxis={[{scaleType: 'time', data: event.price_dates}]}
+                                series={[
+                                    {
+                                        data: event.min_prices,
+                                    },
+                                    {
+                                        data: event.max_prices,
+                                    }
+                                ]}
+                                width={500}
+                                height={300}
+                            />
                         </a>
                     ))}
                 </ul>)}
